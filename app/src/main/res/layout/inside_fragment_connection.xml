@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.toolbarmenupage.ConnectionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/connection_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryGreen"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_Connection_back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/abc_vector_test"
+            app:layout_constraintBottom_toBottomOf="@+id/connection_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="@+id/connection_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/connection_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_Connection_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İletişim"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/connection_toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/connection_toolbar"
+            app:layout_constraintStart_toStartOf="@+id/connection_toolbar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Gym_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Fitness Life Gym"
+            android:textColor="@color/colorPrimaryGreen"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connection_toolbar" />
+
+        <View
+            android:id="@+id/v_Gym_line"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@color/colorPrimaryGreen"
+            app:layout_constraintBottom_toTopOf="@+id/tv_Gym_phone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_Gym_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_Gym_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_name" />
+
+        <TextView
+            android:id="@+id/tv_Gym_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Telefon"
+            android:textColor="@color/colorPrimaryGreen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_name" />
+
+        <TextView
+            android:id="@+id/tv_Gym_phone_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0554 999 74 57"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_phone" />
+
+        <TextView
+            android:id="@+id/tv_Gym_workinghours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Çalışma Saatleri"
+            android:textColor="@color/colorPrimaryGreen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_phone_edit" />
+
+        <TextView
+            android:id="@+id/tv_Gym_workinghours_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="08:00 - 22:00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_workinghours" />
+
+        <TextView
+            android:id="@+id/tv_Gym_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Adres"
+            android:textColor="@color/colorPrimaryGreen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_workinghours_edit" />
+
+        <TextView
+            android:id="@+id/tv_Gym_address_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Huzur Mahallesi, Menderes Cd. No:4A, 34396 Sarıyer/İstanbul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Gym_address" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

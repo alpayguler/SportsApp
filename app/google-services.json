@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "89261177124",
+    "firebase_url": "https://centerfitnessdeneme.firebaseio.com",
+    "project_id": "centerfitnessdeneme",
+    "storage_bucket": "centerfitnessdeneme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89261177124:android:488eb4fcfca7d81ee19bb1",
+        "android_client_info": {
+          "package_name": "com.example.sportsapp_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89261177124-kt86hedq1nbn86jmkhvnfdgbe698fhvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaIYZFFtuT0fxsXkCwF0HgY6rX96bEw50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89261177124-kt86hedq1nbn86jmkhvnfdgbe698fhvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

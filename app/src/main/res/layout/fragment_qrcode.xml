@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.QrcodeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/qrpage_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time"
+        app:layout_constraintStart_toStartOf="@+id/tv_time">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/editprofile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryGreen"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_qrcode_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_photo"
+            app:layout_constraintBottom_toBottomOf="@+id/editprofile_toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/editprofile_toolbar"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editprofile_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_header_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Kod"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/editprofile_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/bt_qrcodegiris"
+            android:layout_width="154dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corners_green"
+            android:text="GİRİŞ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@+id/iv_qrcode"
+            app:layout_constraintTop_toBottomOf="@+id/iv_qrcode" />
+
+        <Button
+            android:id="@+id/bt_qrcodecikis"
+            android:layout_width="154dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corners_orange"
+            android:text="ÇIKIŞ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="@+id/iv_qrcode"
+            app:layout_constraintTop_toBottomOf="@+id/iv_qrcode" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/ic_baseline_qr_code_2_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_toolbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/qrPage_progressbar"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>

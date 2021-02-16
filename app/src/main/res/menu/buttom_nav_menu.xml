@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homepage"
+        android:title="Anasayfa"
+        android:icon="@drawable/home" />
+    <item android:id="@+id/rezervationpage"
+        android:title="Rezervasyon"
+        android:icon="@drawable/booking" />
+    <item android:id="@+id/qrcodepage"
+        android:title="QR code"
+        android:icon="@drawable/qrcode" />
+    <item android:id="@+id/videospage"
+        android:title="Videolar"
+        android:icon="@drawable/youtube" />
+    <item android:id="@+id/bt_logOut"
+        android:title="Profil"
+        android:icon="@drawable/user" />
+
+</menu>

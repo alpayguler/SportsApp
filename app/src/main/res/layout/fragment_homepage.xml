@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomepageFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homepage_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/editprofile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryGreen"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_header_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anasayfa"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/editprofile_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editprofile_toolbar" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_homepage_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile_photo"
+                app:layout_constraintBottom_toBottomOf="@+id/editprofile_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/v_homepage_CircularProgressBar"
+                android:layout_width="275dp"
+                android:layout_height="275dp"
+                android:layout_marginTop="20dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="20dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editprofile_toolbar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_homepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Sizin için"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_homepage_CircularProgressBar" />
+
+            <TextView
+                android:id="@+id/tv_current_density"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anlık Yoğunluk"
+                android:textColor="#8BC34A"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintVertical_bias="0.42" />
+
+            <TextView
+                android:id="@+id/tv_current_user_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/34"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/v_homepage_CircularProgressBar"
+                app:layout_constraintVertical_bias="0.545" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <ProgressBar
+        android:id="@+id/homePage_progressbar"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackgraund">#000000</color>
+    <color name="colorPrimaryGreen">#84AC28</color>
+    <color name="colorOrange">#F8582B</color>
+
+    <color name="colorOne">#373737</color>
+    <color name="colorTwo">#D6D6D6</color>
+    <color name="colorThree">#FFEB3B</color>
+</resources>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UserFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/editprofile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryGreen"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/userpage_top_menu"
+                app:title=" " />
+
+            <View
+                android:id="@+id/v_user_backround"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/rounded_corners_userpage_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editprofile_toolbar" />
+
+            <TextView
+                android:id="@+id/tv_header_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Kullanıcı Bilgileri"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/editprofile_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editprofile_toolbar" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_photo3"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="48dp"
+                android:src="@drawable/profile_photo"
+                app:layout_constraintBottom_toBottomOf="@+id/v_user_backround"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editprofile_toolbar" />
+
+
+            <TextView
+                android:id="@+id/tv_userPage_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="casual"
+                android:text="Bugün\nNasılsın?"
+                android:textColor="@color/colorTwo"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@+id/tv_userPage_username"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editprofile_toolbar"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tv_userPage_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="casual"
+                android:textColor="@color/colorTwo"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/v_user_backround"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Alpay Güler" />
+
+            <TextView
+                android:id="@+id/tv_health_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="GENEL SAĞLIK BİLGİLERİM"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_user_backround" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/v_userpage_CircularProgressBar_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="false"
+                app:layout_constraintEnd_toStartOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_information" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/v_userpage_CircularProgressBar_2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="false"
+                app:layout_constraintBottom_toTopOf="@+id/tv_under_graph2"
+                app:layout_constraintEnd_toStartOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_information"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/v_userpage_CircularProgressBar_3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_information" />
+
+            <TextView
+                android:id="@+id/tv_in_graph1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="85\nkg"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintTop_toTopOf="@+id/v_userpage_CircularProgressBar_1" />
+
+            <TextView
+                android:id="@+id/tv_under_graph1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ağırlık"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_1"
+                app:layout_constraintTop_toBottomOf="@+id/v_userpage_CircularProgressBar_1" />
+
+            <TextView
+                android:id="@+id/tv_in_graph2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="183\ncm"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintTop_toTopOf="@+id/v_userpage_CircularProgressBar_2" />
+
+            <TextView
+                android:id="@+id/tv_under_graph2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Uzunluk"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_2"
+                app:layout_constraintTop_toBottomOf="@+id/v_userpage_CircularProgressBar_2" />
+
+            <TextView
+                android:id="@+id/tv_in_graph3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="19,4\nkg/m²"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintTop_toTopOf="@+id/v_userpage_CircularProgressBar_3" />
+
+            <TextView
+                android:id="@+id/tv_under_graph3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kitle Endeksi"
+                app:layout_constraintEnd_toEndOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintStart_toStartOf="@+id/v_userpage_CircularProgressBar_3"
+                app:layout_constraintTop_toBottomOf="@+id/v_userpage_CircularProgressBar_3" />
+
+            <View
+                android:id="@+id/v_user_backround2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_corners_userpage_top2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_under_graph2" />
+
+            <TextView
+                android:id="@+id/tv_last_gym_entrances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="SON SALON GİRİŞLERİ"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/v_user_backround2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/v_user_backround2"
+                app:layout_constraintTop_toTopOf="@+id/v_user_backround2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <ProgressBar
+        android:id="@+id/userPage_progressbar"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>
+
